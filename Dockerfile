@@ -10,6 +10,8 @@ RUN cp -v rar unrar /usr/local/bin/
 WORKDIR /root/
 RUN git clone https://github.com/ThatZiv/FiveM-Bot.git
 WORKDIR /root/FiveM-Bot/
+RUN rm -r fivem.png
+RUN wget https://i.imgur.com/SjySvVe.png -O fivem.png
 RUN unrar x extract_me.rar
 RUN rm -r extract_me.rar
 WORKDIR /root/FiveM-Bot/cmds/config
